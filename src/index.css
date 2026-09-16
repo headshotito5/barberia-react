@@ -1,23 +1,63 @@
-:root {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #212529;
-  background-color: #f5f5f5;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+
+
+
+.barra_principal {
+  background-color: #111111;
+  padding: 8px;
 }
 
-* {
-  box-sizing: border-box;
+.logo-barberia {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  color: #212529;
+.barra_menu {
+  background-color: #2c3034;
+  border-top: 1px solid #3d4145;
+  border-bottom: 1px solid #444;
+}
+.menu_enlaces {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  min-height: 45px;
 }
 
-#root {
-  min-height: 100vh;
+.menu_enlaces a {
+  color: #f1f3f5;
+  text-decoration: none;
+  padding: 10px 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
+
+.menu_enlaces a:hover {
+  background-color: #3d4145;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+
+
+  .logo-barberia {
+    width: 150px;
+    height: 55px;
+  }
+
+  .menu_enlaces {
+    flex-wrap: wrap;
+  }
+  .menu_enlaces a {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}
+

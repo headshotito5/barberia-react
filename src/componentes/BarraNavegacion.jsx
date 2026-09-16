@@ -1,22 +1,50 @@
+import logo from '../assets/Urban Style logo.png'
 function BarraNavegacion({ cantidadServicios }) {
   return (
-    <nav className="navbar bg-dark border-bottom border-warning">
-      <div className="container py-2 d-flex justify-content-between align-items-center">
-        <div>
-          <h1 className="h4 text-warning mb-1">
-            Barbería Urban Style
-          </h1>
+    <header className="sticky-top">
 
-          <p className="text-white mb-0">
-            Cortes, barba y estilo en un solo lugar.
-          </p>
+      <div className= "barra_principal">
+        <div className="container d-flex justify-content-between align-items-center">
+
+          <a href ="#inicio">
+            <img
+              src={logo}
+              alt="Urban Style Barbería"
+              className="logo-barberia"
+            />
+          </a>
+
+          <span className="contador_servicios">
+            {cantidadServicios} 
+          </span>
+
         </div>
-
-        <span className="badge text-bg-warning fs-6">
-          {cantidadServicios} 5 servicios disponibles
-        </span>
       </div>
-    </nav>
+
+      <nav className="barra_menu">
+        <div className="container">
+          <div className="menu_enlaces">
+
+            <a href="#conocenos">
+              Conócenos
+            </a>
+
+            <a href="#locales">
+              Nuestros locales
+            </a>
+
+            <a href="#vision">
+              Nuestra visión
+            </a>
+
+            <a href="#preguntas">
+              Preguntas frecuentes
+            </a>
+
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
 

@@ -1,6 +1,8 @@
+
 import TarjetaServicio from './componentes/TarjetaServicio.jsx'
 import BarraNavegacion from './componentes/BarraNavegacion.jsx'
 import servicios from './data/datosBarberia.js'
+import Reservas from './componentes/Reservas.jsx'
 
 function App() {
   return (
@@ -16,15 +18,21 @@ function App() {
       <section id="servicios">
         <div className="row">
           {servicios.map((servicio) => (
-            <div className="col-md-4 mb-4" key={servicio.id}>
+            <div
+              className="col-12 col-md-6 col-lg-4 mb-4"
+              key={servicio.id}
+            >
               <TarjetaServicio servicio={servicio} />
-            </div>
+              </div>
           ))}
         </div>
       </section>
+
+      <Reservas servicios={servicios} />
+
     </main>
-  </>
-)
+    </>
+  )
 }
 
 export default App
