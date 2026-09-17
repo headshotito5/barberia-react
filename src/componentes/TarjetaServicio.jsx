@@ -1,12 +1,14 @@
-function TarjetaServicio({ servicio }) {
-  function reservarServicio() {
-    alert('Seleccionaste: ' + servicio.nombre)
-  }
+function TarjetaServicio({ 
+  servicio,
+  agregarServicio,
+  estaEnCarrito
+}) {
 
   return (
-    <div className="card shadow-sm border-warning">
-      <div className="card-body">
-        <span className="badge bg-dark text-warning">
+    <div className="card shadow-sm border-warning h-100">
+      <div className="card-body d-flex flex-column">
+
+        <span className="badge bg-dark text-warning align-self-start">
           {servicio.categoria}
         </span>
 
@@ -19,7 +21,8 @@ function TarjetaServicio({ servicio }) {
         </p>
 
         <p>
-          <strong>Duración aproximada:</strong> {servicio.duracion}
+          <strong>Duración aproximada:</strong> 
+          {servicio.duracion}
         </p>
 
         <p className="fw-bold text-warning-emphasis">
@@ -28,10 +31,18 @@ function TarjetaServicio({ servicio }) {
 
         <button
           type="button"
-          className="btn btn-warning"
-          onClick={reservarServicio}
-        >
-          Reservar
+          className={
+            estaEnCarrito
+              ? 'btn btn-secondary mt-auto'
+              : 'btn btn-warning mt-auto'
+          }
+          onClick={() => agregarServicio(servicio)}
+          disabled={estaEnCarrito}
+          >
+        {estaEnCarrito
+           ? 'servicio agregado'
+            : 'agregar servicio'}
+
         </button>
       </div>
     </div>

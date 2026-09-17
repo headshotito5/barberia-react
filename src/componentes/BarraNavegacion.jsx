@@ -1,5 +1,5 @@
 import logo from '../assets/Urban Style logo.png'
-function BarraNavegacion({ cantidadServicios }) {
+function BarraNavegacion() {
   return (
     <header className="sticky-top">
 
@@ -13,10 +13,6 @@ function BarraNavegacion({ cantidadServicios }) {
               className="logo-barberia"
             />
           </a>
-
-          <span className="contador_servicios">
-            {cantidadServicios} 
-          </span>
 
         </div>
       </div>
