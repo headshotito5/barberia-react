@@ -10,7 +10,7 @@ function BotonReservas({ onClick }) {
         viewBox="0 0 180 100"
         aria-hidden="true"
       >
-        {/* PEINE */}
+
         <g
           className="peine-grupo"
           transform="translate(8, 8) rotate(-32 35 35)"
@@ -35,10 +35,10 @@ function BotonReservas({ onClick }) {
           <line x1="25" y1="63" x2="41" y2="63" />
         </g>
 
-        {/* MITAD SUPERIOR DE LA TIJERA */}
+
         <g className="mitad-tijera mitad-superior">
 
-          {/* Mango */}
+
           <circle
             className="aro-tijera"
             cx="58"
@@ -46,7 +46,7 @@ function BotonReservas({ onClick }) {
             r="11"
           />
 
-          {/* Brazo */}
+ 
           <line
             className="brazo-tijera"
             x1="69"
@@ -55,7 +55,7 @@ function BotonReservas({ onClick }) {
             y2="50"
           />
 
-          {/* Hoja */}
+  
           <path
             className="hoja-tijera"
             d="
@@ -68,10 +68,10 @@ function BotonReservas({ onClick }) {
 
         </g>
 
-        {/* MITAD INFERIOR DE LA TIJERA */}
+
         <g className="mitad-tijera mitad-inferior">
 
-          {/* Mango */}
+
           <circle
             className="aro-tijera"
             cx="58"
@@ -79,7 +79,7 @@ function BotonReservas({ onClick }) {
             r="11"
           />
 
-          {/* Brazo */}
+
           <line
             className="brazo-tijera"
             x1="69"
@@ -88,7 +88,7 @@ function BotonReservas({ onClick }) {
             y2="50"
           />
 
-          {/* Hoja */}
+
           <path
             className="hoja-tijera"
             d="
@@ -101,7 +101,7 @@ function BotonReservas({ onClick }) {
 
         </g>
 
-        {/* Tornillo / eje */}
+
         <circle
           className="eje-tijera"
           cx="92"
